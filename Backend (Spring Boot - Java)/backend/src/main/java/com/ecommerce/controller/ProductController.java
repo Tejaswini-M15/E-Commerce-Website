@@ -1,15 +1,22 @@
-package com.ecommerce.models;
+package com.ecommerce.controllers;
 
-import jakarta.persistence.*;
+import com.ecommerce.models.Product;
+import com.ecommerce.services.ProductService;
+import org.springframework.web.bind.annotation.*;
 
-@Entity
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String description;
-    private double price;
+import java.util.List;
 
-    // Getters and Setters
+@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+    private final ProductService productService;
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
+
+    @GetMapping
+    public List<Product> getAllProducts() {
+        return productService.getAllProducts();
+    }
 }
