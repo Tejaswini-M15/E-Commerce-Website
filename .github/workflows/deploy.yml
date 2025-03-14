@@ -1,0 +1,30 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: Frontend (React.js)
+
+      - name: Build Frontend
+        run: npm run build
+        working-directory: Frontend (React.js)
+
+      - name: Deploy (Dummy Step)
+        run: echo "Deploying app..."
