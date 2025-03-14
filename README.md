@@ -115,5 +115,5 @@ E-Commerce-Website/
 - **Tejaswini Mohapatra** 
 - **Md Sharique Raza**
 - **Harsh Verma**
-- **Nishant Kumar** 🚀
+- **Nishant Kumar** 
 
