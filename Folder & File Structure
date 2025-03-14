@@ -1,0 +1,23 @@
+E-Commerce-Website/
+│── backend/                      (Spring Boot Backend)
+│   ├── src/main/java/com/ecommerce/
+│   │   ├── EcommerceApplication.java
+│   │   ├── controllers/ProductController.java
+│   │   ├── models/Product.java
+│   │   ├── repositories/ProductRepository.java
+│   │   ├── services/ProductService.java
+│   ├── src/main/resources/
+│   │   ├── application.properties
+│   ├── pom.xml                   (Maven dependencies)
+│
+│── frontend/                     (React Frontend)
+│   ├── src/
+│   │   ├── components/ProductList.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   ├── package.json               (Node dependencies)
+│
+│── README.md                      (Already uploaded)
+│── db/                             (Database)
+│   ├── schema.sql
+│   ├── data.sql
