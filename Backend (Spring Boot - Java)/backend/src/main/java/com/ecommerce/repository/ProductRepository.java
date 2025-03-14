@@ -1,20 +1,7 @@
-package com.ecommerce.services;
+package com.ecommerce.repositories;
 
 import com.ecommerce.models.Product;
-import com.ecommerce.repositories.ProductRepository;
-import org.springframework.stereotype.Service;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-@Service
-public class ProductService {
-    private final ProductRepository productRepository;
-
-    public ProductService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
-
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
-    }
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }
