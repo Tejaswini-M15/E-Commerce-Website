@@ -1,7 +1,15 @@
-package com.ecommerce.repositories;
+package com.ecommerce.models;
 
-import com.ecommerce.models.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
+import jakarta.persistence.*;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String description;
+    private double price;
+
+    // Getters and Setters
 }
